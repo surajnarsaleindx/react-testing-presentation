@@ -1,3 +1,13 @@
-import { defineConfig } from 'cypress'
+export default {
+  e2e: {
+    baseUrl: "http://localhost:5173",
+    specPattern: "src/cypress/e2e",
+  },
 
-export default defineConfig({})
+  component: {
+    devServer: {
+      framework: "react",
+      bundler: "vite",
+    },
+  },
+};
