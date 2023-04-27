@@ -1,14 +1,14 @@
-// src/App.tsx
-import React from 'react';
 import './App.css';
 import Counter from './components/Counter';
+import AdvanceCounter from './components/AdvanceCounter';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <Counter />
-      </header>
+      <h1>Basic component</h1>
+      <Counter />
+      <h1>Advanced component</h1>
+      <AdvanceCounter />
     </div>
   );
 }

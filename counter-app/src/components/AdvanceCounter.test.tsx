@@ -45,7 +45,7 @@ describe("Advance Counter", () => {
   });
 
   test("calls sendData when count reaches 5", async () => {
-    const sendDataMock = jest.spyOn(api, "sendData");
+    const sendDataMock = jest.spyOn(api, "sendData"); // fake version of sendData
     const { getByText } = render(<AdvanceCounter initialCount={4} />);
   
     fireEvent.click(getByText("+"));
