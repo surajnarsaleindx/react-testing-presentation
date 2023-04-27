@@ -8,9 +8,15 @@ interface CounterProps {
 const AdvanceCounter: React.FC<CounterProps> = ({ initialCount = 0 }) => {
   const [count, setCount] = useState(initialCount);
 
+  const decrement = () => {
+    if (count > 0) {
+      setCount(count - 1);
+    }
+  };
+
   return (
     <div>
-      <button onClick={() => setCount(count - 1)}>-</button>
+      <button onClick={decrement}>-</button>
       <span>{count}</span>
       <button onClick={() => setCount(count + 1)}>+</button>
     </div>
